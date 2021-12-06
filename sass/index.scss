@@ -1,0 +1,7 @@
+@use "variables";
+@use "templates";
+
+body {
+    @include templates.grid-setting();
+    background-color: map-get($map: variables.$theme-colors, $key: "peach-puff");
+}

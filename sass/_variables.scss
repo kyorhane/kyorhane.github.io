@@ -1,0 +1,23 @@
+// color
+$theme-colors: (
+    "sizzling-red": rgba(250, 63, 83, 1),
+    "winter-sky": rgba(254, 53, 116, 1),
+    "magenta-process": rgba(244, 31, 137, 1),
+    "rose-pink": rgba(252, 106, 193, 1),
+    "shimmering-blush": rgba(208, 119, 143, 1),
+    "melon": rgba(255, 173, 167, 1),
+    "peach-puff": rgba(246, 212, 186, 1),
+    "light-yellow": rgba(254, 250, 220, 1),
+    "dark-purple": rgba(49, 39, 69, 1),
+    "russian-violet": rgba(49, 31, 73, 1),
+);
+
+// font
+$font-stack: helvetica, arial, "courier new", system-ui;
+$font-sizes: (
+    "extra-small": 11px,
+    "small": 16px,
+    "medium": 24px,
+    "large": 30px,
+    "extra-large": 60px,
+);

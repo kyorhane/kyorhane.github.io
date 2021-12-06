@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:active, a:visited {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  background-color: #f6d4ba;
+}
