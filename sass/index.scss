@@ -1,7 +1,122 @@
 @use "variables";
 @use "templates";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap');
 
 body {
-    @include templates.grid-setting();
-    background-color: map-get($map: variables.$theme-colors, $key: "peach-puff");
+    display: grid;
+    grid-template-areas: 
+        "hd hd hd hd"
+        "yt yt sf sf"
+        "ig ig ls ls"
+        ".. sc sc .."
+        "ft ft ft ft";
+        background: #B24592;
+        background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+        background: linear-gradient(to right, #F15F79, #B24592);
+        font: map-get($map: variables.$font-sizes, $key: "small") variables.$font-stack;
+        text-align: center;
+}
+
+header, footer {
+
+    background: #ddd6f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    ul {
+        @include templates.flex-setting();
+
+        li {
+            margin: 1rem;
+        }
+    }
+}
+
+header {
+    grid-area: hd;
+
+    .kyoha {
+        margin-right: auto;
+    }
+}
+
+.yt {
+    grid-area: yt;
+    justify-self: center;
+
+    iframe {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.sf {
+    grid-area: sf;
+}
+
+.ig, .ls {
+    margin-top: 1rem;
+}
+
+.ig {
+    grid-area: ig;
+    justify-self: center;
+}
+
+.ls {
+    grid-area: ls;
+    justify-self: center;
+    width: 600px;
+    height: 475px;
+    @include templates.flex-setting(column);
+    writing-mode: vertical-rl;
+    
+    .poem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 2 150px;
+        font: map-get($map: variables.$font-sizes, $key: "extra-small") "Noto Sans JP";
+        color: map-get($map: variables.$theme-colors, $key: "light-yellow");
+        @include templates.std-border(4px, solid, map-get($map: variables.$theme-colors, $key: "rose-pink"));
+
+        &:hover {
+            flex: 500px;
+            font: map-get($map: variables.$font-sizes, $key: "medium") "Noto Sans JP";
+        }
+    }
+
+    #eighteen, #sixtysix, #eightyfour {
+        border-right: none;
+    }
+}
+
+.sc {
+    grid-area: sc;
+    color: map-get($map: variables.$theme-colors, $key: "peach-puff");
+
+    ul {
+        @include templates.flex-setting;
+        justify-content: center;
+
+        li {
+            margin: 2rem 1rem 1rem 1rem;
+
+            a {
+                @include templates.flex-setting;
+                align-items: center;
+    
+                svg {
+                    margin: 0 .25rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    grid-area: ft;
+
+    .cookie {
+        margin-left: auto;
+    }
 }

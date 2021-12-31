@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,107 @@ li {
 
 body {
   display: grid;
-  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
-  background-color: #f6d4ba;
+  grid-template-areas: "hd hd hd hd" "yt yt sf sf" "ig ig ls ls" ".. sc sc .." "ft ft ft ft";
+  background: #B24592;
+  background: linear-gradient(to right, #F15F79, #B24592);
+  font: 16px helvetica, arial, "courier new", system-ui;
+  text-align: center;
+}
+
+header, footer {
+  background: #ddd6f3;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #faaca8, #ddd6f3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header ul, footer ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+header ul li, footer ul li {
+  margin: 1rem;
+}
+
+header {
+  grid-area: hd;
+}
+header .kyoha {
+  margin-right: auto;
+}
+
+.yt {
+  grid-area: yt;
+  justify-self: center;
+}
+.yt iframe {
+  aspect-ratio: 16/9;
+}
+
+.sf {
+  grid-area: sf;
+}
+
+.ig, .ls {
+  margin-top: 1rem;
+}
+
+.ig {
+  grid-area: ig;
+  justify-self: center;
+}
+
+.ls {
+  grid-area: ls;
+  justify-self: center;
+  width: 600px;
+  height: 475px;
+  display: flex;
+  flex-flow: column nowrap;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+.ls .poem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 2 150px;
+  font: 11px "Noto Sans JP";
+  color: #fefadc;
+  border: 4px solid #fc6ac1;
+}
+.ls .poem:hover {
+  flex: 500px;
+  font: 24px "Noto Sans JP";
+}
+.ls #eighteen, .ls #sixtysix, .ls #eightyfour {
+  border-right: none;
+}
+
+.sc {
+  grid-area: sc;
+  color: #f6d4ba;
+}
+.sc ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.sc ul li {
+  margin: 2rem 1rem 1rem 1rem;
+}
+.sc ul li a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.sc ul li a svg {
+  margin: 0 0.25rem;
+}
+
+footer {
+  grid-area: ft;
+}
+footer .cookie {
+  margin-left: auto;
 }
