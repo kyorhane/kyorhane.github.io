@@ -7,7 +7,7 @@
 a {
   text-decoration: none;
 }
-a:active, a:visited {
+a:link, a:active, a:visited {
   color: inherit;
 }
 
