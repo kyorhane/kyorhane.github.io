@@ -18,17 +18,16 @@ li {
 body {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
 }
 
-header, footer {
-  align-self: stretch;
+header ul li, footer ul li {
+  margin: 0.5rem;
 }
 
-.yt, .sf {
-  margin-top: 1rem;
+.yt, .sf, .ig, .ls, .sc {
+  align-self: center;
 }
 
-.sf {
-  height: 400px;
+.sc {
+  font-size: 8px;
 }

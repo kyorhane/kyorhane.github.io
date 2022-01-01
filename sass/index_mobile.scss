@@ -3,17 +3,20 @@
 
 body {
     @include templates.flex-setting(column);
-    align-items: center;
 }
 
 header, footer {
-    align-self: stretch;
+    ul {
+        li {
+            margin: .5rem;
+        }
+    }
 }
 
-.yt, .sf {
-    margin-top: 1rem;
+.yt, .sf, .ig, .ls, .sc {
+    align-self: center;
 }
 
-.sf {
-    height: 400px;
+.sc {
+    font-size: 8px;
 }

@@ -18,7 +18,7 @@ li {
 
 body {
   display: grid;
-  grid-template-areas: "hd hd hd hd" "yt yt sf sf" "ig ig ls ls" ".. sc sc .." "ft ft ft ft";
+  grid-template-areas: "hd hd hd hd" "yt yt sf sf" "ig ig ls ls" "sc sc sc sc" "ft ft ft ft";
   background: #B24592;
   background: linear-gradient(to right, #F15F79, #B24592);
   font: 16px helvetica, arial, "courier new", system-ui;
@@ -47,12 +47,17 @@ header .kyoha {
   margin-right: auto;
 }
 
+.yt, .sf {
+  margin-top: 1rem;
+}
+.yt iframe, .sf iframe {
+  width: clamp(300px, 37.5rem, 90vw);
+  aspect-ratio: 16/9;
+}
+
 .yt {
   grid-area: yt;
   justify-self: center;
-}
-.yt iframe {
-  aspect-ratio: 16/9;
 }
 
 .sf {
@@ -71,7 +76,7 @@ header .kyoha {
 .ls {
   grid-area: ls;
   justify-self: center;
-  width: 600px;
+  width: clamp(300px, 37.5rem, 90vw);
   height: 475px;
   display: flex;
   flex-flow: column nowrap;
@@ -82,13 +87,13 @@ header .kyoha {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1 2 150px;
+  flex: 1 2 clamp(75px, 9.375rem, 22.5vw);
   font: 11px "Noto Sans JP";
   color: #fefadc;
   border: 4px solid #fc6ac1;
 }
 .ls .poem:hover {
-  flex: 500px;
+  flex: clamp(225px, 28.125rem, 75vw);
   font: 24px "Noto Sans JP";
 }
 .ls #eighteen, .ls #sixtysix, .ls #eightyfour {
@@ -105,7 +110,7 @@ header .kyoha {
   justify-content: center;
 }
 .sc ul li {
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 2rem 1rem 1rem;
 }
 .sc ul li a {
   display: flex;

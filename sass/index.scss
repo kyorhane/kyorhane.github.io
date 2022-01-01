@@ -8,7 +8,7 @@ body {
         "hd hd hd hd"
         "yt yt sf sf"
         "ig ig ls ls"
-        ".. sc sc .."
+        "sc sc sc sc"
         "ft ft ft ft";
         background: #B24592;
         background: -webkit-linear-gradient(to right, #F15F79, #B24592);
@@ -40,13 +40,20 @@ header {
     }
 }
 
+.yt, .sf {
+
+    margin-top: 1rem;
+
+    iframe {
+        width: clamp(300px, 37.5rem, 90vw);
+        aspect-ratio: 16 / 9;
+    }
+}
+
 .yt {
     grid-area: yt;
     justify-self: center;
 
-    iframe {
-        aspect-ratio: 16 / 9;
-    }
 }
 
 .sf {
@@ -65,7 +72,7 @@ header {
 .ls {
     grid-area: ls;
     justify-self: center;
-    width: 600px;
+    width: clamp(300px, 37.5rem, 90vw);
     height: 475px;
     @include templates.flex-setting(column);
     writing-mode: vertical-rl;
@@ -74,13 +81,13 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1 2 150px;
+        flex: 1 2 clamp(75px, 9.375rem, 22.5vw);
         font: map-get($map: variables.$font-sizes, $key: "extra-small") "Noto Sans JP";
         color: map-get($map: variables.$theme-colors, $key: "light-yellow");
         @include templates.std-border(4px, solid, map-get($map: variables.$theme-colors, $key: "rose-pink"));
 
         &:hover {
-            flex: 500px;
+            flex: clamp(225px, 28.125rem, 75vw);
             font: map-get($map: variables.$font-sizes, $key: "medium") "Noto Sans JP";
         }
     }
@@ -99,7 +106,7 @@ header {
         justify-content: center;
 
         li {
-            margin: 2rem 1rem 1rem 1rem;
+            margin: 2rem 1rem 1rem;
 
             a {
                 @include templates.flex-setting;
