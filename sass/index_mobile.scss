@@ -1,0 +1,19 @@
+@use "variables";
+@use "templates";
+
+body {
+    @include templates.flex-setting(column);
+    align-items: center;
+}
+
+header, footer {
+    align-self: stretch;
+}
+
+.yt, .sf {
+    margin-top: 1rem;
+}
+
+.sf {
+    height: 400px;
+}
