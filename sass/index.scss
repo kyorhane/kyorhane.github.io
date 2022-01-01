@@ -73,7 +73,7 @@ header {
     grid-area: ls;
     justify-self: center;
     width: clamp(300px, 37.5rem, 90vw);
-    height: 475px;
+    height: clamp(30rem, 32.5rem, 90vh);
     @include templates.flex-setting(column);
     writing-mode: vertical-rl;
     

@@ -77,7 +77,7 @@ header .kyoha {
   grid-area: ls;
   justify-self: center;
   width: clamp(300px, 37.5rem, 90vw);
-  height: 475px;
+  height: clamp(30rem, 32.5rem, 90vh);
   display: flex;
   flex-flow: column nowrap;
   -ms-writing-mode: tb-rl;
